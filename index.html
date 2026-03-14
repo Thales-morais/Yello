@@ -721,3 +721,905 @@ body.dm-light .dark-toggle { background: var(--n-100); color: var(--n-700); }
 </style>
 </head>
 <body>
+
+<!-- ── Sidebar ──────────────────────────────────────────── -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <span>Yello</span>
+    <small>Brand Guide 2025</small>
+  </div>
+  <a class="nav-item active" href="#cover"        onclick="setActive(this)"><span class="nav-num">00</span><span>Cover</span></a>
+  <a class="nav-item"        href="#foundation"   onclick="setActive(this)"><span class="nav-num">01</span><span>Fundação</span></a>
+  <a class="nav-item"        href="#logo"         onclick="setActive(this)"><span class="nav-num">02</span><span>Logo</span></a>
+  <a class="nav-item"        href="#mascot"       onclick="setActive(this)"><span class="nav-num">03</span><span>Mascote</span></a>
+  <a class="nav-item"        href="#colors"       onclick="setActive(this)"><span class="nav-num">04</span><span>Cores</span></a>
+  <a class="nav-item"        href="#typography"   onclick="setActive(this)"><span class="nav-num">05</span><span>Tipografia</span></a>
+  <a class="nav-item"        href="#spacing"      onclick="setActive(this)"><span class="nav-num">06</span><span>Espaçamento</span></a>
+  <a class="nav-item"        href="#components"   onclick="setActive(this)"><span class="nav-num">07</span><span>Componentes</span></a>
+  <a class="nav-item"        href="#motion"       onclick="setActive(this)"><span class="nav-num">08</span><span>Movimento</span></a>
+  <a class="nav-item"        href="#templates"    onclick="setActive(this)"><span class="nav-num">09</span><span>Templates</span></a>
+  <a class="nav-item"        href="#voice"        onclick="setActive(this)"><span class="nav-num">10</span><span>Voz & Tom</span></a>
+  <a class="nav-item"        href="#dos-donts"    onclick="setActive(this)"><span class="nav-num">11</span><span>Do's & Don'ts</span></a>
+  <a class="nav-item"        href="#tokens"       onclick="setActive(this)"><span class="nav-num">12</span><span>Tokens</span></a>
+  <div class="sidebar-footer">
+    <button class="dark-toggle" onclick="document.body.classList.toggle('dm-light')">
+      <span>⬡</span><span>Alternar Tema</span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── Progress dots ──────────────────────────────────────── -->
+<div class="progress-dots" id="progressDots"></div>
+
+<!-- ── Main ──────────────────────────────────────────────── -->
+<main class="main">
+
+  <!-- ① COVER -->
+  <section id="cover" class="dark">
+    <div class="cover-wordmark">
+      <svg class="cover-dash-inline" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="60" cy="60" r="54" fill="#F5C518" opacity="0.12"/>
+        <circle cx="60" cy="48" r="20" fill="#F5C518"/>
+        <rect x="38" y="72" width="44" height="8" rx="4" fill="#F5C518"/>
+        <circle cx="52" cy="44" r="4" fill="#0A0A0A"/>
+        <circle cx="68" cy="44" r="4" fill="#0A0A0A"/>
+        <path d="M52 56 Q60 64 68 56" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+      </svg>
+      Yello
+    </div>
+    <p class="cover-tagline">Brand Guidelines — Identidade Visual Completa</p>
+    <p class="cover-year">© 2025 · Versão 1.0 · Confidencial</p>
+    <div class="cover-scroll">scroll</div>
+  </section>
+
+  <!-- ② FOUNDATION -->
+  <section id="foundation" class="dark">
+    <div class="relative">
+      <span class="section-num">01</span>
+      <p class="section-label">Fundação</p>
+      <h2 class="section-title">Quem somos</h2>
+      <p class="section-sub">A essência que guia cada decisão de design, comunicação e produto.</p>
+    </div>
+    <div class="manifesto fade-in" style="margin-bottom: 48px;">
+      "Yello existe para tornar o dinheiro mais rápido, mais simples e mais justo — começando por quem mais precisa."
+    </div>
+    <div class="grid-3 fade-in">
+      <div class="value-card">
+        <div class="v-icon">⚡</div>
+        <h3>Velocidade</h3>
+        <p>Cada segundo importa. Eliminamos friction desnecessária para que o usuário chegue ao que precisa sem esforço.</p>
+      </div>
+      <div class="value-card">
+        <div class="v-icon">🔍</div>
+        <h3>Clareza</h3>
+        <p>Linguagem simples, interface direta. Nunca deixamos o usuário adivinhar o que aconteceu ou o que fazer a seguir.</p>
+      </div>
+      <div class="value-card">
+        <div class="v-icon">🤝</div>
+        <h3>Confiança</h3>
+        <p>O dinheiro é sério. Somos transparentes sobre taxas, prazos e riscos — sem letras miúdas.</p>
+      </div>
+      <div class="value-card">
+        <div class="v-icon">💛</div>
+        <h3>Calor Humano</h3>
+        <p>Fintech não precisa ser fria. Cada touchpoint carrega a personalidade calorosa e brasileira da Yello.</p>
+      </div>
+      <div class="value-card">
+        <div class="v-icon">🌱</div>
+        <h3>Inclusão</h3>
+        <p>Projetado para funcionar para todos — do empreendedor ao funcionário, da capital ao interior.</p>
+      </div>
+      <div class="value-card">
+        <div class="v-icon">🚀</div>
+        <h3>Progresso</h3>
+        <p>Nunca estamos prontos. Iteramos rápido, aprendemos com os dados e evoluímos o produto toda semana.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ③ LOGO SYSTEM -->
+  <section id="logo" class="light">
+    <div class="relative">
+      <span class="section-num">02</span>
+      <p class="section-label">Logo System</p>
+      <h2 class="section-title">Identidade visual</h2>
+      <p class="section-sub">Variações do logotipo e regras de uso para garantir consistência em todos os canais.</p>
+    </div>
+
+    <div class="grid-3 fade-in" style="margin-bottom: 48px;">
+      <div class="logo-variant" style="background:#0A0A0A;">
+        <span class="logo-text" style="font-size:48px; color:#F5C518;">Yello</span>
+        <span class="logo-variant-label">Principal — fundo escuro</span>
+      </div>
+      <div class="logo-variant" style="background:#F5C518;">
+        <span class="logo-text" style="font-size:48px; color:#0A0A0A;">Yello</span>
+        <span class="logo-variant-label" style="color:#0A0A0A;">Versão amarela</span>
+      </div>
+      <div class="logo-variant" style="background:#FFFFFF; border:1px solid #E5E5EA;">
+        <span class="logo-text" style="font-size:48px; color:#0A0A0A;">Yello</span>
+        <span class="logo-variant-label">Fundo branco</span>
+      </div>
+    </div>
+
+    <div class="fade-in" style="margin-bottom: 48px; text-align: center;">
+      <div class="clearspace-demo">
+        <span class="logo-text" style="font-size:56px; color:#F5C518;">Yello</span>
+      </div>
+    </div>
+
+    <div class="fade-in">
+      <p class="section-label" style="margin-bottom:16px;">Usos proibidos</p>
+      <div class="forbidden-list">
+        <div class="forbidden-item">Distorcer ou esticar o logotipo</div>
+        <div class="forbidden-item">Usar em fundos com baixo contraste</div>
+        <div class="forbidden-item">Aplicar sombra ou efeito 3D</div>
+        <div class="forbidden-item">Alterar as cores do logo</div>
+        <div class="forbidden-item">Recriar com outra tipografia</div>
+        <div class="forbidden-item">Rotacionar o logotipo</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ④ MASCOT -->
+  <section id="mascot" class="mid">
+    <div class="relative">
+      <span class="section-num">03</span>
+      <p class="section-label">Mascote</p>
+      <h2 class="section-title">Dash</h2>
+      <p class="section-sub">O mascote da Yello. Dash é ágil, expressivo e sempre pronto para ajudar.</p>
+    </div>
+
+    <div class="dash-display fade-in" style="margin-bottom:48px;">
+      <svg class="dash-main-svg" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="140" cy="140" r="130" fill="#1C1C1E"/>
+        <circle cx="140" cy="140" r="130" fill="url(#glow)" opacity="0.3"/>
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="40%" r="60%">
+            <stop offset="0%" stop-color="#F5C518" stop-opacity="0.4"/>
+            <stop offset="100%" stop-color="#F5C518" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <!-- Body -->
+        <ellipse cx="140" cy="155" rx="55" ry="65" fill="#F5C518"/>
+        <!-- Head -->
+        <circle cx="140" cy="95" r="42" fill="#F5C518"/>
+        <!-- Eyes -->
+        <circle cx="126" cy="90" r="7" fill="#0A0A0A"/>
+        <circle cx="154" cy="90" r="7" fill="#0A0A0A"/>
+        <circle cx="128" cy="88" r="2.5" fill="white"/>
+        <circle cx="156" cy="88" r="2.5" fill="white"/>
+        <!-- Smile -->
+        <path d="M124 106 Q140 120 156 106" stroke="#0A0A0A" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <!-- Arms -->
+        <ellipse cx="75" cy="150" rx="14" ry="28" rx="14" ry="28" fill="#F5C518" transform="rotate(-20 75 150)"/>
+        <ellipse cx="205" cy="150" rx="14" ry="28" fill="#F5C518" transform="rotate(20 205 150)"/>
+        <!-- Legs -->
+        <ellipse cx="122" cy="218" rx="14" ry="20" fill="#E8A800"/>
+        <ellipse cx="158" cy="218" rx="14" ry="20" fill="#E8A800"/>
+        <!-- Lightning bolt detail -->
+        <path d="M136 130 L128 148 L138 148 L132 168 L148 142 L138 142 L144 130Z" fill="#0A0A0A" opacity="0.15"/>
+      </svg>
+
+      <div>
+        <div class="pose-grid fade-in">
+          <div class="pose-item">
+            <svg viewBox="0 0 120 120" fill="none">
+              <circle cx="60" cy="50" r="28" fill="#F5C518"/>
+              <circle cx="50" cy="46" r="5" fill="#0A0A0A"/>
+              <circle cx="70" cy="46" r="5" fill="#0A0A0A"/>
+              <path d="M50 62 Q60 72 70 62" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <ellipse cx="60" cy="88" rx="22" ry="28" fill="#F5C518"/>
+            </svg>
+            <p class="pose-label">Neutro</p>
+          </div>
+          <div class="pose-item">
+            <svg viewBox="0 0 120 120" fill="none">
+              <circle cx="60" cy="50" r="28" fill="#F5C518"/>
+              <path d="M47 44 Q52 38 57 44" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <path d="M63 44 Q68 38 73 44" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <path d="M48 60 Q60 72 72 60" stroke="#0A0A0A" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <ellipse cx="60" cy="88" rx="22" ry="28" fill="#F5C518"/>
+              <line x1="30" y1="55" x2="18" y2="40" stroke="#F5C518" stroke-width="3" stroke-linecap="round"/>
+              <line x1="90" y1="55" x2="102" y2="40" stroke="#F5C518" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <p class="pose-label">Animado</p>
+          </div>
+          <div class="pose-item">
+            <svg viewBox="0 0 120 120" fill="none">
+              <circle cx="60" cy="50" r="28" fill="#F5C518"/>
+              <circle cx="50" cy="46" r="5" fill="#0A0A0A"/>
+              <circle cx="70" cy="46" r="5" fill="#0A0A0A"/>
+              <path d="M50 66 Q60 58 70 66" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <ellipse cx="60" cy="88" rx="22" ry="28" fill="#F5C518"/>
+              <path d="M38 70 L26 90" stroke="#F5C518" stroke-width="4" stroke-linecap="round"/>
+            </svg>
+            <p class="pose-label">Confuso</p>
+          </div>
+          <div class="pose-item">
+            <svg viewBox="0 0 120 120" fill="none">
+              <circle cx="60" cy="50" r="28" fill="#F5C518"/>
+              <rect x="46" y="43" width="12" height="8" rx="2" fill="#0A0A0A"/>
+              <rect x="62" y="43" width="12" height="8" rx="2" fill="#0A0A0A"/>
+              <path d="M50 62 Q60 70 70 62" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+              <ellipse cx="60" cy="88" rx="22" ry="28" fill="#F5C518"/>
+              <circle cx="80" cy="35" r="8" fill="#22C55E"/>
+              <path d="M76 35 L79 38 L84 31" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+            <p class="pose-label">Sucesso</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dash-rules fade-in">
+      <div class="dash-rule">Dash sempre aparece com expressão amigável — nunca agressivo ou intimidador.</div>
+      <div class="dash-rule">As cores do Dash são restritas à paleta primária: amarelo Yello e preto.</div>
+      <div class="dash-rule">Dash não deve ser deformado, esticado ou recolorido fora do padrão.</div>
+      <div class="dash-rule">Em contextos formais (B2B, jurídico), Dash aparece com expressão neutra.</div>
+    </div>
+  </section>
+
+  <!-- ⑤ COLORS -->
+  <section id="colors" class="white">
+    <div class="relative">
+      <span class="section-num">04</span>
+      <p class="section-label">Sistema de Cores</p>
+      <h2 class="section-title">Paleta</h2>
+      <p class="section-sub">Cores com propósito. Cada tom tem função definida e não deve ser usado fora de contexto.</p>
+    </div>
+
+    <p class="color-group-title">Amarelos — Identidade principal</p>
+    <div class="color-grid fade-in">
+      <div class="swatch" onclick="copyHex('#FFE033', this)">
+        <div class="swatch-color" style="background:#FFE033;"></div>
+        <div class="swatch-info"><div class="swatch-name">Bright</div><div class="swatch-hex">#FFE033</div></div>
+      </div>
+      <div class="swatch" onclick="copyHex('#F5C518', this)">
+        <div class="swatch-color" style="background:#F5C518;"></div>
+        <div class="swatch-info"><div class="swatch-name">Primary ★</div><div class="swatch-hex">#F5C518</div></div>
+      </div>
+      <div class="swatch" onclick="copyHex('#E8A800', this)">
+        <div class="swatch-color" style="background:#E8A800;"></div>
+        <div class="swatch-info"><div class="swatch-name">Deep</div><div class="swatch-hex">#E8A800</div></div>
+      </div>
+      <div class="swatch" onclick="copyHex('#C9920A', this)">
+        <div class="swatch-color" style="background:#C9920A;"></div>
+        <div class="swatch-info"><div class="swatch-name">Gold</div><div class="swatch-hex">#C9920A</div></div>
+      </div>
+      <div class="swatch" onclick="copyHex('#FFF8DC', this)">
+        <div class="swatch-color" style="background:#FFF8DC; border:1px solid #E5E5EA;"></div>
+        <div class="swatch-info"><div class="swatch-name">Pale</div><div class="swatch-hex">#FFF8DC</div></div>
+      </div>
+    </div>
+
+    <p class="color-group-title">Neutros — Texto e superfície</p>
+    <div class="color-grid fade-in">
+      <div class="swatch" onclick="copyHex('#0A0A0A', this)">
+        <div class="swatch-color" style="background:#0A0A0A;"></div>
+        <div class="swatch-info"><div class="swatch-name">950</div><div class="swatch-hex">#0A0A0A</div></div>
+      </div>
+      <div class="swatch" onclick="copyHex('#1C1C1E', this)">
+        <div class="swatch-color" style="background:#1C1C1E;"></div>
+        <div class="swatch-info"><div class="swatch-name">900</div><div class="swatch-hex">#1C1C1E</div></div>
+      </div>
+      <div class="swatch" onclick="copyHex('#2C2C2E', this)">
+        <div class="swatch-color" style="background:#2C2C2E;"></div>
+        <div class="swatch-info"><div class="swatch-name">800</div><div class="swatch-hex">#2C2C2E</div></div>
+      </div>
+      <div class="swatch" onclick="copyHex('#636366', this)">
+        <div class="swatch-color" style="background:#636366;"></div>
+        <div class="swatch-info"><div class="swatch-name">500</div><div class="swatch-hex">#636366</div></div>
+      </div>
+      <div class="swatch" onclick="copyHex('#E5E5EA', this)">
+        <div class="swatch-color" style="background:#E5E5EA;"></div>
+        <div class="swatch-info"><div class="swatch-name">100</div><div class="swatch-hex">#E5E5EA</div></div>
+      </div>
+      <div class="swatch" onclick="copyHex('#F5F5F7', this)">
+        <div class="swatch-color" style="background:#F5F5F7; border:1px solid #E5E5EA;"></div>
+        <div class="swatch-info"><div class="swatch-name">50</div><div class="swatch-hex">#F5F5F7</div></div>
+      </div>
+      <div class="swatch" onclick="copyHex('#FFFFFF', this)">
+        <div class="swatch-color" style="background:#FFFFFF; border:1px solid #E5E5EA;"></div>
+        <div class="swatch-info"><div class="swatch-name">White</div><div class="swatch-hex">#FFFFFF</div></div>
+      </div>
+    </div>
+
+    <p class="color-group-title">Sinal — Feedback e status</p>
+    <div class="color-grid fade-in">
+      <div class="swatch" onclick="copyHex('#2563EB', this)">
+        <div class="swatch-color" style="background:#2563EB;"></div>
+        <div class="swatch-info"><div class="swatch-name">Info</div><div class="swatch-hex">#2563EB</div></div>
+      </div>
+      <div class="swatch" onclick="copyHex('#22C55E', this)">
+        <div class="swatch-color" style="background:#22C55E;"></div>
+        <div class="swatch-info"><div class="swatch-name">Sucesso</div><div class="swatch-hex">#22C55E</div></div>
+      </div>
+      <div class="swatch" onclick="copyHex('#F97316', this)">
+        <div class="swatch-color" style="background:#F97316;"></div>
+        <div class="swatch-info"><div class="swatch-name">Atenção</div><div class="swatch-hex">#F97316</div></div>
+      </div>
+      <div class="swatch" onclick="copyHex('#EF4444', this)">
+        <div class="swatch-color" style="background:#EF4444;"></div>
+        <div class="swatch-info"><div class="swatch-name">Erro</div><div class="swatch-hex">#EF4444</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑥ TYPOGRAPHY -->
+  <section id="typography" class="light">
+    <div class="relative">
+      <span class="section-num">05</span>
+      <p class="section-label">Tipografia</p>
+      <h2 class="section-title">Sistema tipográfico</h2>
+      <p class="section-sub">Três famílias com papéis distintos. Nunca as misture fora das diretrizes.</p>
+    </div>
+
+    <div class="grid-2 fade-in" style="margin-bottom:48px; gap:32px;">
+      <div>
+        <div class="type-example">
+          <p class="type-meta">SYNE — Display / Headings</p>
+          <div style="font-family:'Syne',sans-serif; font-weight:800; font-size:52px; line-height:1; letter-spacing:-2px;">Aa Bb Cc</div>
+          <p style="font-family:'Syne',sans-serif; font-weight:400; font-size:18px; margin-top:12px; color:#636366;">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>abcdefghijklmnopqrstuvwxyz 0123456789</p>
+        </div>
+        <div class="type-example">
+          <p class="type-meta">DM SANS — Body / UI</p>
+          <div style="font-family:'DM Sans',sans-serif; font-weight:400; font-size:36px; line-height:1.2;">Aa Bb Cc</div>
+          <p style="font-family:'DM Sans',sans-serif; font-size:16px; margin-top:12px; color:#636366; line-height:1.6;">O texto corrido usa DM Sans. Leve, legível e amigável. Ideal para parágrafos, labels e qualquer conteúdo que precise de alta legibilidade.</p>
+        </div>
+        <div class="type-example">
+          <p class="type-meta">JETBRAINS MONO — Code / Data</p>
+          <div style="font-family:'JetBrains Mono',monospace; font-weight:500; font-size:28px;">Aa Bb 00</div>
+          <p style="font-family:'JetBrains Mono',monospace; font-size:14px; margin-top:12px; color:#636366;">R$ 1.234,56 · #F5C518 · --y-primary</p>
+        </div>
+      </div>
+
+      <div>
+        <table class="type-scale-table">
+          <thead>
+            <tr><th>Token</th><th>Tamanho</th><th>Peso</th><th>Uso</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>display-2xl</td><td>72px</td><td>800</td><td>Hero, Cover</td></tr>
+            <tr><td>display-xl</td><td>56px</td><td>800</td><td>Section title</td></tr>
+            <tr><td>display-lg</td><td>40px</td><td>700</td><td>Page title</td></tr>
+            <tr><td>heading-xl</td><td>32px</td><td>700</td><td>Card title</td></tr>
+            <tr><td>heading-lg</td><td>24px</td><td>600</td><td>Subtitle</td></tr>
+            <tr><td>heading-md</td><td>20px</td><td>600</td><td>Section sub</td></tr>
+            <tr><td>body-lg</td><td>18px</td><td>400</td><td>Lead text</td></tr>
+            <tr><td>body-md</td><td>16px</td><td>400</td><td>Parágrafo</td></tr>
+            <tr><td>body-sm</td><td>14px</td><td>400</td><td>Caption</td></tr>
+            <tr><td>label</td><td>13px</td><td>500</td><td>Form label</td></tr>
+            <tr><td>micro</td><td>11px</td><td>500</td><td>Metadata</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑦ SPACING -->
+  <section id="spacing" class="white">
+    <div class="relative">
+      <span class="section-num">06</span>
+      <p class="section-label">Espaçamento & Grid</p>
+      <h2 class="section-title">Ritmo visual</h2>
+      <p class="section-sub">Sistema de espaçamento baseado em múltiplos de 4px. Consistência que o olho percebe sem saber.</p>
+    </div>
+
+    <div class="grid-demo fade-in">
+      <div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div>
+      <div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div>
+      <div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div>
+      <div class="grid-col"></div><div class="grid-col"></div><div class="grid-col"></div>
+    </div>
+
+    <div class="fade-in">
+      <div class="spacing-item"><div class="spacing-item-wrap"><div class="spacing-bar" style="width:4px;"></div></div><span class="spacing-label">sp-1 · 4px</span></div>
+      <div class="spacing-item"><div class="spacing-item-wrap"><div class="spacing-bar" style="width:8px;"></div></div><span class="spacing-label">sp-2 · 8px</span></div>
+      <div class="spacing-item"><div class="spacing-item-wrap"><div class="spacing-bar" style="width:12px;"></div></div><span class="spacing-label">sp-3 · 12px</span></div>
+      <div class="spacing-item"><div class="spacing-item-wrap"><div class="spacing-bar" style="width:16px;"></div></div><span class="spacing-label">sp-4 · 16px</span></div>
+      <div class="spacing-item"><div class="spacing-item-wrap"><div class="spacing-bar" style="width:20px;"></div></div><span class="spacing-label">sp-5 · 20px</span></div>
+      <div class="spacing-item"><div class="spacing-item-wrap"><div class="spacing-bar" style="width:24px;"></div></div><span class="spacing-label">sp-6 · 24px</span></div>
+      <div class="spacing-item"><div class="spacing-item-wrap"><div class="spacing-bar" style="width:32px;"></div></div><span class="spacing-label">sp-8 · 32px</span></div>
+      <div class="spacing-item"><div class="spacing-item-wrap"><div class="spacing-bar" style="width:40px;"></div></div><span class="spacing-label">sp-10 · 40px</span></div>
+      <div class="spacing-item"><div class="spacing-item-wrap"><div class="spacing-bar" style="width:48px;"></div></div><span class="spacing-label">sp-12 · 48px</span></div>
+      <div class="spacing-item"><div class="spacing-item-wrap"><div class="spacing-bar" style="width:64px;"></div></div><span class="spacing-label">sp-16 · 64px</span></div>
+      <div class="spacing-item"><div class="spacing-item-wrap"><div class="spacing-bar" style="width:80px;"></div></div><span class="spacing-label">sp-20 · 80px</span></div>
+      <div class="spacing-item"><div class="spacing-item-wrap"><div class="spacing-bar" style="width:96px;"></div></div><span class="spacing-label">sp-24 · 96px</span></div>
+      <div class="spacing-item"><div class="spacing-item-wrap"><div class="spacing-bar" style="width:128px;"></div></div><span class="spacing-label">sp-32 · 128px</span></div>
+    </div>
+  </section>
+
+  <!-- ⑧ COMPONENTS -->
+  <section id="components" class="light">
+    <div class="relative">
+      <span class="section-num">07</span>
+      <p class="section-label">Componentes</p>
+      <h2 class="section-title">Biblioteca de UI</h2>
+      <p class="section-sub">Atoms e moléculas reutilizáveis que formam a interface do produto.</p>
+    </div>
+
+    <div class="comp-group fade-in">
+      <h3>Botões</h3>
+      <div class="flex gap-4 flex-wrap items-center">
+        <button class="btn btn-primary btn-lg">Pagar agora</button>
+        <button class="btn btn-primary btn-md">Confirmar</button>
+        <button class="btn btn-primary btn-sm">Enviar</button>
+        <button class="btn btn-secondary btn-md">Cancelar</button>
+        <button class="btn btn-ghost btn-md">Ver mais</button>
+        <button class="btn btn-danger btn-md">Excluir</button>
+      </div>
+    </div>
+
+    <div class="comp-group fade-in">
+      <h3>Badges</h3>
+      <div class="flex gap-4 flex-wrap items-center">
+        <span class="badge badge-yellow">⭐ Premium</span>
+        <span class="badge badge-green">✓ Aprovado</span>
+        <span class="badge badge-blue">ℹ Pendente</span>
+        <span class="badge badge-red">✕ Recusado</span>
+        <span class="badge badge-gray">Rascunho</span>
+      </div>
+    </div>
+
+    <div class="comp-group fade-in">
+      <h3>Inputs</h3>
+      <div class="flex gap-6 flex-wrap">
+        <div>
+          <label class="field-label">Valor da transferência</label>
+          <div class="input-wrap">
+            <input class="field-input" type="text" placeholder="R$ 0,00">
+          </div>
+          <p class="field-hint">Limite diário: R$ 10.000</p>
+        </div>
+        <div>
+          <label class="field-label">CPF</label>
+          <div class="input-wrap">
+            <input class="field-input success" type="text" value="123.456.789-00">
+          </div>
+          <p class="field-hint" style="color:#22C55E;">✓ CPF válido</p>
+        </div>
+        <div>
+          <label class="field-label">Chave Pix</label>
+          <div class="input-wrap">
+            <input class="field-input error" type="text" placeholder="chave@exemplo.com">
+          </div>
+          <p class="field-error">Chave não encontrada</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="comp-group fade-in">
+      <h3>Tooltip</h3>
+      <div class="flex gap-6 items-center">
+        <div class="tooltip-wrap">
+          <button class="btn btn-secondary btn-md">Hover aqui</button>
+          <div class="tooltip-box">Taxa de 0% para transferências PIX</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="comp-group fade-in">
+      <h3>Cards</h3>
+      <div class="grid-3">
+        <div class="ui-card">
+          <div class="ui-card-img">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+              <circle cx="32" cy="32" r="28" fill="#F5C518" opacity="0.2"/>
+              <path d="M20 32 L28 40 L44 24" stroke="#F5C518" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="ui-card-body">
+            <h4>Transferência enviada</h4>
+            <p>R$ 250,00 para João Silva • agora</p>
+          </div>
+        </div>
+        <div class="ui-card">
+          <div class="ui-card-img">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+              <circle cx="32" cy="32" r="28" fill="#F5C518" opacity="0.2"/>
+              <rect x="20" y="24" width="24" height="18" rx="3" stroke="#F5C518" stroke-width="2.5" fill="none"/>
+              <line x1="20" y1="30" x2="44" y2="30" stroke="#F5C518" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <div class="ui-card-body">
+            <h4>Cartão virtual</h4>
+            <p>•••• •••• •••• 4521 · Visa</p>
+          </div>
+        </div>
+        <div class="ui-card">
+          <div class="ui-card-img">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+              <circle cx="32" cy="32" r="28" fill="#F5C518" opacity="0.2"/>
+              <path d="M32 20 L36 28 L45 29 L38 36 L40 45 L32 41 L24 45 L26 36 L19 29 L28 28Z" fill="#F5C518"/>
+            </svg>
+          </div>
+          <div class="ui-card-body">
+            <h4>Cashback Yello</h4>
+            <p>Você ganhou R$ 12,50 hoje</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑨ MOTION -->
+  <section id="motion" class="dark">
+    <div class="relative">
+      <span class="section-num">08</span>
+      <p class="section-label">Movimento</p>
+      <h2 class="section-title">Sistema de animação</h2>
+      <p class="section-sub">Movimento com intenção. Cada transição comunica algo sobre o estado da interface.</p>
+    </div>
+
+    <table class="motion-token-table fade-in" style="margin-bottom:48px;">
+      <thead>
+        <tr><th>Token</th><th>Valor</th><th>Uso</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>--dur-micro</td><td style="color:#8E8E93;">150ms</td><td style="color:#8E8E93;">Hover, focus states</td></tr>
+        <tr><td>--dur-base</td><td style="color:#8E8E93;">250ms</td><td style="color:#8E8E93;">Modais, dropdowns</td></tr>
+        <tr><td>--dur-enter</td><td style="color:#8E8E93;">400ms</td><td style="color:#8E8E93;">Entrada de elementos</td></tr>
+        <tr><td>--dur-page</td><td style="color:#8E8E93;">600ms</td><td style="color:#8E8E93;">Transição de página</td></tr>
+        <tr><td>--ease-std</td><td style="color:#8E8E93;">cubic-bezier(0.4,0,0.2,1)</td><td style="color:#8E8E93;">Movimento padrão</td></tr>
+        <tr><td>--ease-spring</td><td style="color:#8E8E93;">cubic-bezier(0.34,1.56,0.64,1)</td><td style="color:#8E8E93;">Elementos que saltam</td></tr>
+        <tr><td>--ease-sharp</td><td style="color:#8E8E93;">cubic-bezier(0.4,0,1,1)</td><td style="color:#8E8E93;">Saídas rápidas</td></tr>
+      </tbody>
+    </table>
+
+    <div class="grid-4 fade-in">
+      <div class="anim-demo-wrap">
+        <div class="anim-demo-box" onclick="replay(this,'play-fade-up')">
+          <span style="font-size:24px;">↑</span>
+        </div>
+        <p class="anim-demo-label">Fade Up</p>
+      </div>
+      <div class="anim-demo-wrap">
+        <div class="anim-demo-box" onclick="replay(this,'play-scale-in')">
+          <span style="font-size:24px;">◉</span>
+        </div>
+        <p class="anim-demo-label">Scale In</p>
+      </div>
+      <div class="anim-demo-wrap">
+        <div class="anim-demo-box" onclick="replay(this,'play-slide-in')">
+          <span style="font-size:24px;">→</span>
+        </div>
+        <p class="anim-demo-label">Slide In</p>
+      </div>
+      <div class="anim-demo-wrap">
+        <div class="anim-demo-box play-dash-pulse">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <circle cx="16" cy="12" r="7" fill="#0A0A0A"/>
+            <ellipse cx="16" cy="24" rx="8" ry="7" fill="#0A0A0A"/>
+          </svg>
+        </div>
+        <p class="anim-demo-label">Dash Pulse</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑩ IMAGE TEMPLATES -->
+  <section id="templates" class="mid">
+    <div class="relative">
+      <span class="section-num">09</span>
+      <p class="section-label">Templates</p>
+      <h2 class="section-title">Formatos de imagem</h2>
+      <p class="section-sub">Templates prontos para redes sociais, comunicações e materiais de marca.</p>
+    </div>
+
+    <div class="template-tabs fade-in">
+      <button class="tab-btn active" onclick="switchTab(this,'tab-social')">Social Media</button>
+      <button class="tab-btn" onclick="switchTab(this,'tab-email')">E-mail</button>
+      <button class="tab-btn" onclick="switchTab(this,'tab-app')">In-App</button>
+    </div>
+
+    <div id="tab-social" class="tab-panel active fade-in">
+      <div class="grid-3">
+        <div class="template-card">
+          <div class="template-card-header">
+            <div class="dots"><div class="dot" style="background:#EF4444;"></div><div class="dot" style="background:#F97316;"></div><div class="dot" style="background:#22C55E;"></div></div>
+            <span>Post Instagram — 1080×1080</span>
+          </div>
+          <div class="template-card-body" style="background:#0A0A0A; height:200px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px;">
+            <span style="font-family:'Syne',sans-serif; font-weight:800; font-size:36px; color:#F5C518; letter-spacing:-1px;">Yello</span>
+            <span style="font-size:12px; color:#636366; font-family:'JetBrains Mono',monospace; letter-spacing:0.1em;">TRANSFERÊNCIA PIX GRÁTIS</span>
+          </div>
+        </div>
+        <div class="template-card">
+          <div class="template-card-header">
+            <div class="dots"><div class="dot" style="background:#EF4444;"></div><div class="dot" style="background:#F97316;"></div><div class="dot" style="background:#22C55E;"></div></div>
+            <span>Story — 1080×1920</span>
+          </div>
+          <div class="template-card-body" style="background:#F5C518; height:200px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px;">
+            <span style="font-family:'Syne',sans-serif; font-weight:800; font-size:28px; color:#0A0A0A; letter-spacing:-1px;">Seu dinheiro,<br>do seu jeito.</span>
+          </div>
+        </div>
+        <div class="template-card">
+          <div class="template-card-header">
+            <div class="dots"><div class="dot" style="background:#EF4444;"></div><div class="dot" style="background:#F97316;"></div><div class="dot" style="background:#22C55E;"></div></div>
+            <span>LinkedIn Banner — 1584×396</span>
+          </div>
+          <div class="template-card-body" style="background:#1C1C1E; height:200px; display:flex; align-items:center; justify-content:center; gap:16px;">
+            <span style="font-family:'Syne',sans-serif; font-weight:800; font-size:40px; color:#F5C518;">Yello</span>
+            <span style="width:1px; height:40px; background:#2C2C2E;"></span>
+            <span style="font-size:13px; color:#8E8E93; font-family:'DM Sans',sans-serif;">Fintech para o Brasil real</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-email" class="tab-panel fade-in">
+      <div class="template-card" style="max-width:600px;">
+        <div class="template-card-header">
+          <div class="dots"><div class="dot" style="background:#EF4444;"></div><div class="dot" style="background:#F97316;"></div><div class="dot" style="background:#22C55E;"></div></div>
+          <span>E-mail Transacional</span>
+        </div>
+        <div class="template-card-body" style="background:#FFFFFF; padding:32px;">
+          <div style="text-align:center; margin-bottom:24px; padding-bottom:24px; border-bottom:1px solid #E5E5EA;">
+            <span style="font-family:'Syne',sans-serif; font-weight:800; font-size:28px; color:#F5C518;">Yello</span>
+          </div>
+          <p style="font-size:22px; font-weight:600; color:#0A0A0A; margin-bottom:8px;">Transferência recebida 💛</p>
+          <p style="font-size:15px; color:#636366; line-height:1.6; margin-bottom:24px;">Você recebeu <strong style="color:#0A0A0A;">R$ 350,00</strong> de Maria Lima via PIX.</p>
+          <div style="background:#F5F5F7; border-radius:12px; padding:20px; margin-bottom:24px; font-size:14px; color:#636366; font-family:'JetBrains Mono',monospace;">
+            De: Maria Lima<br>Valor: R$ 350,00<br>Horário: 14:32 · 14 Mar 2025
+          </div>
+          <div style="text-align:center;">
+            <a href="#" style="background:#F5C518; color:#0A0A0A; padding:12px 28px; border-radius:8px; font-weight:600; text-decoration:none; display:inline-block;">Ver no app</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-app" class="tab-panel fade-in">
+      <div class="grid-2" style="max-width:700px;">
+        <div class="template-card">
+          <div class="template-card-header">
+            <div class="dots"><div class="dot" style="background:#EF4444;"></div><div class="dot" style="background:#F97316;"></div><div class="dot" style="background:#22C55E;"></div></div>
+            <span>Push Notification</span>
+          </div>
+          <div class="template-card-body" style="background:#1C1C1E; padding:20px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div style="width:40px; height:40px; background:#F5C518; border-radius:10px; display:flex; align-items:center; justify-content:center; font-family:'Syne',sans-serif; font-weight:800; font-size:14px; color:#0A0A0A; flex-shrink:0;">Y</div>
+              <div>
+                <p style="font-size:13px; font-weight:600; color:#FFFFFF; margin-bottom:2px;">Yello · agora</p>
+                <p style="font-size:13px; color:#8E8E93; line-height:1.4;">PIX recebido! R$ 120,00 de Carlos M.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="template-card">
+          <div class="template-card-header">
+            <div class="dots"><div class="dot" style="background:#EF4444;"></div><div class="dot" style="background:#F97316;"></div><div class="dot" style="background:#22C55E;"></div></div>
+            <span>Toast In-App</span>
+          </div>
+          <div class="template-card-body" style="background:#F5F5F7; padding:20px;">
+            <div style="background:#0A0A0A; color:#F5C518; padding:12px 20px; border-radius:9999px; font-size:13px; font-family:'JetBrains Mono',monospace; display:inline-flex; gap:8px; align-items:center;">
+              <span>✓</span> Transferência enviada
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑪ VOICE & TONE -->
+  <section id="voice" class="dark">
+    <div class="relative">
+      <span class="section-num">10</span>
+      <p class="section-label">Voz & Tom</p>
+      <h2 class="section-title">Como a Yello fala</h2>
+      <p class="section-sub">Nossa voz é humana, direta e calorosa. Falamos como um amigo que entende de dinheiro.</p>
+    </div>
+
+    <div class="voice-compare fade-in">
+      <div class="voice-col voice-good">
+        <p class="voice-col-title">✓ Yello fala assim</p>
+        <div class="voice-example">Seu PIX chegou! R$ 200 de Ana já estão na sua conta.</div>
+        <div class="voice-example">Ops, algo deu errado. Tenta de novo em alguns segundos?</div>
+        <div class="voice-example">Você está indo bem! Economizou R$ 180 esse mês.</div>
+        <div class="voice-example">Limite aumentado. Agora você pode transferir até R$ 5.000 por dia.</div>
+      </div>
+      <div class="voice-col voice-bad">
+        <p class="voice-col-title">✕ Evitamos isso</p>
+        <div class="voice-example">Transação Pix efetivada com sucesso. Valor creditado.</div>
+        <div class="voice-example">Erro 504: falha na comunicação com o servidor externo.</div>
+        <div class="voice-example">Parabéns! Você atingiu sua meta de economia mensal estabelecida.</div>
+        <div class="voice-example">O limite transacional diário do usuário foi incrementado.</div>
+      </div>
+    </div>
+
+    <div class="grid-4 fade-in" style="margin-top:48px;">
+      <div class="card dark-card">
+        <p style="font-size:20px; margin-bottom:8px;">😊</p>
+        <h3 style="font-family:'Syne',sans-serif; font-weight:700; color:#F5C518; margin-bottom:8px; font-size:16px;">Amigável</h3>
+        <p style="font-size:13px; color:#8E8E93; line-height:1.5;">Calorosa sem ser infantil. Séria quando precisa.</p>
+      </div>
+      <div class="card dark-card">
+        <p style="font-size:20px; margin-bottom:8px;">⚡</p>
+        <h3 style="font-family:'Syne',sans-serif; font-weight:700; color:#F5C518; margin-bottom:8px; font-size:16px;">Direta</h3>
+        <p style="font-size:13px; color:#8E8E93; line-height:1.5;">Sem enrolação. A informação importante vem primeiro.</p>
+      </div>
+      <div class="card dark-card">
+        <p style="font-size:20px; margin-bottom:8px;">🤝</p>
+        <h3 style="font-family:'Syne',sans-serif; font-weight:700; color:#F5C518; margin-bottom:8px; font-size:16px;">Humana</h3>
+        <p style="font-size:13px; color:#8E8E93; line-height:1.5;">Usa "você", não "usuário". Erros são admitidos com sinceridade.</p>
+      </div>
+      <div class="card dark-card">
+        <p style="font-size:20px; margin-bottom:8px;">🇧🇷</p>
+        <h3 style="font-family:'Syne',sans-serif; font-weight:700; color:#F5C518; margin-bottom:8px; font-size:16px;">Brasileira</h3>
+        <p style="font-size:13px; color:#8E8E93; line-height:1.5;">Português natural, sem anglicismos desnecessários.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑫ DO'S & DON'TS -->
+  <section id="dos-donts" class="white">
+    <div class="relative">
+      <span class="section-num">11</span>
+      <p class="section-label">Do's & Don'ts</p>
+      <h2 class="section-title">Aplicação da marca</h2>
+      <p class="section-sub">Exemplos visuais do que reforça e do que dilui a identidade Yello.</p>
+    </div>
+
+    <div class="dd-grid fade-in">
+      <div>
+        <p class="dd-col-title do-title">✓ Faça</p>
+        <div class="dd-item do">
+          <div class="dd-visual" style="color:#F5C518;">Yello</div>
+          <p class="dd-desc">Logo sobre fundo escuro — máximo contraste</p>
+        </div>
+        <div class="dd-item do">
+          <div class="dd-visual" style="background:rgba(34,197,94,0.08); border-color:rgba(34,197,94,0.2);">
+            <span style="font-family:'Syne',sans-serif; font-weight:800; font-size:22px; color:#0A0A0A;">Yello</span>
+          </div>
+          <p class="dd-desc">Logo sobre fundo amarelo — versão alternativa</p>
+        </div>
+        <div class="dd-item do">
+          <div class="dd-visual">
+            <span class="badge badge-yellow" style="font-size:14px; padding:6px 16px;">⭐ Conta Yello</span>
+          </div>
+          <p class="dd-desc">Badge com paleta de cores correta</p>
+        </div>
+      </div>
+      <div>
+        <p class="dd-col-title dont-title">✕ Não faça</p>
+        <div class="dd-item dont">
+          <div class="dd-visual">
+            <span style="font-family:'Arial',sans-serif; font-weight:700; font-size:32px; color:#9B59B6;">Yello</span>
+          </div>
+          <p class="dd-desc">Logo com cor incorreta ou fonte diferente</p>
+        </div>
+        <div class="dd-item dont">
+          <div class="dd-visual">
+            <span style="font-family:'Syne',sans-serif; font-weight:800; font-size:32px; color:#F5C518; transform:rotate(-15deg); display:inline-block;">Yello</span>
+          </div>
+          <p class="dd-desc">Logo rotacionado ou distorcido</p>
+        </div>
+        <div class="dd-item dont">
+          <div class="dd-visual" style="background:linear-gradient(135deg,#667eea,#764ba2);">
+            <span style="font-family:'Syne',sans-serif; font-weight:800; font-size:32px; color:white;">Yello</span>
+          </div>
+          <p class="dd-desc">Logo sobre gradientes genéricos de IA</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑬ TOKENS -->
+  <section id="tokens" class="dark">
+    <div class="relative">
+      <span class="section-num">12</span>
+      <p class="section-label">Design Tokens</p>
+      <h2 class="section-title">Referência completa</h2>
+      <p class="section-sub">Todos os tokens CSS disponíveis para uso nos produtos Yello.</p>
+    </div>
+
+    <table class="tokens-table fade-in">
+      <thead>
+        <tr><th>Token</th><th>Valor</th><th>Preview</th><th>Uso</th></tr>
+      </thead>
+      <tbody>
+        <tr class="token-category"><td colspan="4">Cores — Amarelos</td></tr>
+        <tr><td><span class="token-var">--y-bright</span></td><td><span class="token-val">#FFE033</span></td><td><span class="token-swatch" style="background:#FFE033;"></span></td><td style="color:#636366; font-size:12px;">Destaques, hover</td></tr>
+        <tr><td><span class="token-var">--y-primary</span></td><td><span class="token-val">#F5C518</span></td><td><span class="token-swatch" style="background:#F5C518;"></span></td><td style="color:#636366; font-size:12px;">Cor principal da marca</td></tr>
+        <tr><td><span class="token-var">--y-deep</span></td><td><span class="token-val">#E8A800</span></td><td><span class="token-swatch" style="background:#E8A800;"></span></td><td style="color:#636366; font-size:12px;">Hover de botão primary</td></tr>
+        <tr><td><span class="token-var">--y-gold</span></td><td><span class="token-val">#C9920A</span></td><td><span class="token-swatch" style="background:#C9920A;"></span></td><td style="color:#636366; font-size:12px;">Labels, metadados</td></tr>
+        <tr><td><span class="token-var">--y-pale</span></td><td><span class="token-val">#FFF8DC</span></td><td><span class="token-swatch" style="background:#FFF8DC; border-color:rgba(255,255,255,0.2)"></span></td><td style="color:#636366; font-size:12px;">Backgrounds de badge</td></tr>
+
+        <tr class="token-category"><td colspan="4">Cores — Neutros</td></tr>
+        <tr><td><span class="token-var">--n-950</span></td><td><span class="token-val">#0A0A0A</span></td><td><span class="token-swatch" style="background:#0A0A0A;"></span></td><td style="color:#636366; font-size:12px;">Texto principal, fundo escuro</td></tr>
+        <tr><td><span class="token-var">--n-900</span></td><td><span class="token-val">#1C1C1E</span></td><td><span class="token-swatch" style="background:#1C1C1E;"></span></td><td style="color:#636366; font-size:12px;">Superfície escura</td></tr>
+        <tr><td><span class="token-var">--n-800</span></td><td><span class="token-val">#2C2C2E</span></td><td><span class="token-swatch" style="background:#2C2C2E;"></span></td><td style="color:#636366; font-size:12px;">Cards escuros, borders</td></tr>
+        <tr><td><span class="token-var">--n-500</span></td><td><span class="token-val">#636366</span></td><td><span class="token-swatch" style="background:#636366;"></span></td><td style="color:#636366; font-size:12px;">Texto secundário</td></tr>
+        <tr><td><span class="token-var">--n-100</span></td><td><span class="token-val">#E5E5EA</span></td><td><span class="token-swatch" style="background:#E5E5EA;"></span></td><td style="color:#636366; font-size:12px;">Divisores, borders claros</td></tr>
+        <tr><td><span class="token-var">--n-50</span></td><td><span class="token-val">#F5F5F7</span></td><td><span class="token-swatch" style="background:#F5F5F7;"></span></td><td style="color:#636366; font-size:12px;">Background padrão</td></tr>
+
+        <tr class="token-category"><td colspan="4">Tipografia</td></tr>
+        <tr><td><span class="token-var">--font-display</span></td><td><span class="token-val">'Syne', sans-serif</span></td><td>—</td><td style="color:#636366; font-size:12px;">Headings, wordmark</td></tr>
+        <tr><td><span class="token-var">--font-body</span></td><td><span class="token-val">'DM Sans', sans-serif</span></td><td>—</td><td style="color:#636366; font-size:12px;">Texto corrido, UI</td></tr>
+        <tr><td><span class="token-var">--font-mono</span></td><td><span class="token-val">'JetBrains Mono'</span></td><td>—</td><td style="color:#636366; font-size:12px;">Valores, código, labels</td></tr>
+
+        <tr class="token-category"><td colspan="4">Motion</td></tr>
+        <tr><td><span class="token-var">--dur-micro</span></td><td><span class="token-val">150ms</span></td><td>—</td><td style="color:#636366; font-size:12px;">Hover, focus</td></tr>
+        <tr><td><span class="token-var">--dur-base</span></td><td><span class="token-val">250ms</span></td><td>—</td><td style="color:#636366; font-size:12px;">Modais, dropdowns</td></tr>
+        <tr><td><span class="token-var">--dur-enter</span></td><td><span class="token-val">400ms</span></td><td>—</td><td style="color:#636366; font-size:12px;">Entrada de elementos</td></tr>
+        <tr><td><span class="token-var">--ease-spring</span></td><td><span class="token-val">cubic-bezier(0.34,1.56,0.64,1)</span></td><td>—</td><td style="color:#636366; font-size:12px;">Elementos que saltam</td></tr>
+
+        <tr class="token-category"><td colspan="4">Border Radius</td></tr>
+        <tr><td><span class="token-var">--r-sm</span></td><td><span class="token-val">6px</span></td><td>—</td><td style="color:#636366; font-size:12px;">Botões sm, inputs</td></tr>
+        <tr><td><span class="token-var">--r-md</span></td><td><span class="token-val">12px</span></td><td>—</td><td style="color:#636366; font-size:12px;">Cards, tooltips</td></tr>
+        <tr><td><span class="token-var">--r-lg</span></td><td><span class="token-val">20px</span></td><td>—</td><td style="color:#636366; font-size:12px;">Modais, painéis</td></tr>
+        <tr><td><span class="token-var">--r-full</span></td><td><span class="token-val">9999px</span></td><td>—</td><td style="color:#636366; font-size:12px;">Pills, badges, toasts</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+
+<!-- ── Copy toast ──────────────────────────────────────── -->
+<div class="copy-toast" id="copyToast">Copiado!</div>
+
+<script>
+// Active nav
+function setActive(el) {
+  document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+  el.classList.add('active');
+}
+
+// Copy hex
+function copyHex(hex, el) {
+  navigator.clipboard.writeText(hex).catch(() => {});
+  const toast = document.getElementById('copyToast');
+  toast.textContent = hex + ' copiado!';
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2000);
+}
+
+// Animation replay
+function replay(el, cls) {
+  el.classList.remove(cls);
+  void el.offsetWidth;
+  el.classList.add(cls);
+}
+
+// Tab switching
+function switchTab(btn, panelId) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(panelId).classList.add('active');
+}
+
+// Progress dots
+const sections = document.querySelectorAll('section[id]');
+const dotsEl = document.getElementById('progressDots');
+sections.forEach((s, i) => {
+  const dot = document.createElement('div');
+  dot.className = 'progress-dot' + (i === 0 ? ' active' : '');
+  dot.title = s.id;
+  dot.onclick = () => s.scrollIntoView({ behavior: 'smooth' });
+  dotsEl.appendChild(dot);
+});
+
+// Scroll spy
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const idx = Array.from(sections).indexOf(entry.target);
+      document.querySelectorAll('.progress-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
+      // update nav
+      const href = '#' + entry.target.id;
+      document.querySelectorAll('.nav-item').forEach(n => n.classList.toggle('active', n.getAttribute('href') === href));
+    }
+  });
+}, { threshold: 0.4 });
+sections.forEach(s => observer.observe(s));
+
+// Fade in on scroll
+const fadeEls = document.querySelectorAll('.fade-in');
+const fadeObs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+fadeEls.forEach(el => fadeObs.observe(el));
+</script>
+</body>
+</html>
