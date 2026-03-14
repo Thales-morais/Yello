@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="bodyGrad" cx="45%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFE033"/>
+      <stop offset="100%" stop-color="#E8A800"/>
+    </radialGradient>
+    <radialGradient id="stripeGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#C9920A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Coiled tail / body circle -->
+  <ellipse cx="200" cy="220" rx="130" ry="125" fill="url(#bodyGrad)" stroke="#1a1000" stroke-width="7"/>
+
+  <!-- Body stripes (radial lines from center) -->
+  <g opacity="0.22" stroke="#C9920A" stroke-width="3">
+    <line x1="200" y1="220" x2="90" y2="140"/>
+    <line x1="200" y1="220" x2="75" y2="200"/>
+    <line x1="200" y1="220" x2="80" y2="265"/>
+    <line x1="200" y1="220" x2="110" y2="320"/>
+    <line x1="200" y1="220" x2="160" y2="345"/>
+    <line x1="200" y1="220" x2="220" y2="348"/>
+    <line x1="200" y1="220" x2="275" y2="330"/>
+    <line x1="200" y1="220" x2="310" y2="290"/>
+    <line x1="200" y1="220" x2="325" y2="235"/>
+    <line x1="200" y1="220" x2="315" y2="170"/>
+    <line x1="200" y1="220" x2="280" y2="120"/>
+    <line x1="200" y1="220" x2="230" y2="97"/>
+  </g>
+
+  <!-- Tail spiral -->
+  <path d="M 195 310 Q 155 325 148 295 Q 142 268 168 258 Q 190 250 195 270 Q 198 285 185 290 Q 176 293 175 283"
+        fill="none" stroke="#1a1000" stroke-width="7" stroke-linecap="round"/>
+  <path d="M 195 310 Q 155 325 148 295 Q 142 268 168 258 Q 190 250 195 270 Q 198 285 185 290 Q 176 293 175 283"
+        fill="none" stroke="url(#bodyGrad)" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Neck -->
+  <path d="M 240 170 Q 270 155 285 130 Q 270 115 255 120 Q 245 140 230 155 Z" fill="url(#bodyGrad)" stroke="#1a1000" stroke-width="5"/>
+
+  <!-- Head -->
+  <ellipse cx="290" cy="108" rx="62" ry="52" fill="url(#bodyGrad)" stroke="#1a1000" stroke-width="7"/>
+
+  <!-- Crest on head -->
+  <path d="M 265 68 Q 275 48 288 42 Q 300 38 308 52 Q 300 56 292 62 Q 282 65 270 72 Z"
+        fill="url(#bodyGrad)" stroke="#1a1000" stroke-width="5"/>
+
+  <!-- Eye — large characteristic chameleon eye -->
+  <circle cx="308" cy="98" r="26" fill="white" stroke="#1a1000" stroke-width="5"/>
+  <circle cx="311" cy="100" r="16" fill="#0a0a0a"/>
+  <circle cx="318" cy="94" r="5" fill="white"/>
+
+  <!-- Mouth / smile -->
+  <path d="M 255 118 Q 272 130 290 122" stroke="#1a1000" stroke-width="4" stroke-linecap="round" fill="none"/>
+
+  <!-- Nostril -->
+  <circle cx="252" cy="110" r="3" fill="#1a1000"/>
+
+  <!-- Front leg / foot -->
+  <path d="M 180 215 Q 155 230 140 250 Q 150 260 165 255 Q 170 245 180 240 Q 195 232 200 220 Z"
+        fill="url(#bodyGrad)" stroke="#1a1000" stroke-width="5"/>
+  <!-- Toes -->
+  <path d="M 138 252 L 125 262 M 145 258 L 135 270 M 152 262 L 145 275" stroke="#1a1000" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Back leg -->
+  <path d="M 215 285 Q 200 305 195 325 Q 210 332 220 325 Q 225 310 230 298 Z"
+        fill="url(#bodyGrad)" stroke="#1a1000" stroke-width="5"/>
+
+  <!-- Outer border circle -->
+  <ellipse cx="200" cy="220" rx="130" ry="125" fill="none" stroke="#1a1000" stroke-width="7"/>
+</svg>

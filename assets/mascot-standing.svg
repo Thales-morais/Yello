@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <radialGradient id="bodyS" cx="45%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFE033"/>
+      <stop offset="100%" stop-color="#D4940A"/>
+    </radialGradient>
+    <radialGradient id="bellyS" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE880"/>
+      <stop offset="100%" stop-color="#F5C518"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Tail (curled behind body) -->
+  <path d="M 260 400 Q 310 420 320 390 Q 328 360 305 345 Q 285 333 272 348 Q 262 360 275 370 Q 284 378 290 368"
+        fill="none" stroke="#1a1000" stroke-width="9" stroke-linecap="round"/>
+  <path d="M 260 400 Q 310 420 320 390 Q 328 360 305 345 Q 285 333 272 348 Q 262 360 275 370 Q 284 378 290 368"
+        fill="none" stroke="url(#bodyS)" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Body -->
+  <ellipse cx="200" cy="320" rx="75" ry="95" fill="url(#bodyS)" stroke="#1a1000" stroke-width="7"/>
+
+  <!-- Belly / lighter area -->
+  <ellipse cx="200" cy="330" rx="48" ry="68" fill="url(#bellyS)" opacity="0.6"/>
+
+  <!-- Body stripes (horizontal) -->
+  <g stroke="#C9920A" stroke-width="2.5" opacity="0.35">
+    <path d="M 130 300 Q 200 295 270 300" fill="none"/>
+    <path d="M 128 318 Q 200 313 272 318" fill="none"/>
+    <path d="M 130 336 Q 200 331 270 336" fill="none"/>
+    <path d="M 133 354 Q 200 349 267 354" fill="none"/>
+    <path d="M 138 372 Q 200 367 262 372" fill="none"/>
+    <path d="M 145 390 Q 200 385 255 390" fill="none"/>
+  </g>
+
+  <!-- Left arm (at hip) -->
+  <path d="M 130 310 Q 95 320 85 345 Q 95 358 108 352 Q 118 332 135 325 Z"
+        fill="url(#bodyS)" stroke="#1a1000" stroke-width="6"/>
+
+  <!-- Right arm (raised / waving) -->
+  <path d="M 270 290 Q 305 265 325 240 Q 315 228 305 232 Q 290 250 275 272 Z"
+        fill="url(#bodyS)" stroke="#1a1000" stroke-width="6"/>
+
+  <!-- Right hand open -->
+  <path d="M 325 240 Q 338 228 345 218 M 325 240 Q 332 225 342 220 M 325 240 Q 335 230 344 226"
+        stroke="#1a1000" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- Hand palm -->
+  <ellipse cx="335" cy="230" rx="14" ry="12" fill="url(#bodyS)" stroke="#1a1000" stroke-width="5" transform="rotate(-20 335 230)"/>
+
+  <!-- Left foot -->
+  <path d="M 158 408 Q 140 428 132 445 Q 150 452 160 442 Q 165 428 170 415 Z"
+        fill="url(#bodyS)" stroke="#1a1000" stroke-width="6"/>
+  <!-- Left toes -->
+  <path d="M 130 447 L 118 458 M 138 450 L 128 462 M 146 452 L 138 464"
+        stroke="#1a1000" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Right foot -->
+  <path d="M 238 408 Q 250 428 255 445 Q 236 450 228 440 Q 228 425 232 412 Z"
+        fill="url(#bodyS)" stroke="#1a1000" stroke-width="6"/>
+  <!-- Right toes -->
+  <path d="M 258 447 L 270 458 M 250 451 L 260 462 M 242 453 L 250 464"
+        stroke="#1a1000" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Neck -->
+  <path d="M 170 230 Q 190 215 215 218 Q 230 215 240 230 Q 240 255 200 260 Q 165 258 170 230 Z"
+        fill="url(#bodyS)" stroke="#1a1000" stroke-width="6"/>
+
+  <!-- Head -->
+  <ellipse cx="200" cy="195" rx="72" ry="62" fill="url(#bodyS)" stroke="#1a1000" stroke-width="7"/>
+
+  <!-- Head crest -->
+  <path d="M 178 140 Q 185 115 200 105 Q 214 98 222 112 Q 212 118 204 128 Q 194 136 182 148 Z"
+        fill="url(#bodyS)" stroke="#1a1000" stroke-width="5"/>
+
+  <!-- Left eye (small, looking sideways) -->
+  <circle cx="172" cy="185" r="14" fill="white" stroke="#1a1000" stroke-width="4"/>
+  <circle cx="174" cy="187" r="9" fill="#0a0a0a"/>
+  <circle cx="178" cy="183" r="3" fill="white"/>
+
+  <!-- Right eye (big expressive) -->
+  <circle cx="228" cy="180" r="24" fill="white" stroke="#1a1000" stroke-width="5"/>
+  <circle cx="232" cy="183" r="15" fill="#0a0a0a"/>
+  <circle cx="238" cy="177" r="5" fill="white"/>
+
+  <!-- Mouth open / big smile -->
+  <path d="M 168 210 Q 185 228 204 230 Q 220 228 232 215"
+        stroke="#1a1000" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <!-- Lower lip / chin -->
+  <path d="M 168 210 Q 190 220 205 222 Q 220 220 232 215 L 228 225 Q 205 238 178 228 Z"
+        fill="#0a0a0a" opacity="0.85"/>
+  <!-- Teeth -->
+  <rect x="186" y="220" width="9" height="7" rx="2" fill="white"/>
+  <!-- Tongue hint -->
+  <path d="M 195 226 Q 202 235 210 228" stroke="#E8520A" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Nostril -->
+  <circle cx="165" cy="205" r="3.5" fill="#1a1000"/>
+  <circle cx="170" cy="204" r="2" fill="#1a1000"/>
+</svg>
