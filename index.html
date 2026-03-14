@@ -725,7 +725,10 @@ body.dm-light .dark-toggle { background: var(--n-100); color: var(--n-700); }
 <!-- ── Sidebar ──────────────────────────────────────────── -->
 <nav class="sidebar" id="sidebar">
   <div class="sidebar-logo">
-    <span>Yello</span>
+    <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+      <img src="assets/mascot-icon.png" alt="Dash" style="width:28px; height:28px; object-fit:contain;">
+      <span>Yello</span>
+    </div>
     <small>Brand Guide 2025</small>
   </div>
   <a class="nav-item active" href="#cover"        onclick="setActive(this)"><span class="nav-num">00</span><span>Cover</span></a>
@@ -756,16 +759,8 @@ body.dm-light .dark-toggle { background: var(--n-100); color: var(--n-700); }
 
   <!-- ① COVER -->
   <section id="cover" class="dark">
-    <div class="cover-wordmark">
-      <svg class="cover-dash-inline" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="60" cy="60" r="54" fill="#F5C518" opacity="0.12"/>
-        <circle cx="60" cy="48" r="20" fill="#F5C518"/>
-        <rect x="38" y="72" width="44" height="8" rx="4" fill="#F5C518"/>
-        <circle cx="52" cy="44" r="4" fill="#0A0A0A"/>
-        <circle cx="68" cy="44" r="4" fill="#0A0A0A"/>
-        <path d="M52 56 Q60 64 68 56" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-      </svg>
-      Yello
+    <div class="cover-wordmark" style="flex-direction:column; gap:24px;">
+      <img src="assets/logo.png" alt="Yello" style="height: clamp(80px,12vw,160px); width:auto; animation: heroReveal 1.2s var(--ease-spring) both; filter: drop-shadow(0 8px 32px rgba(245,197,24,0.3));">
     </div>
     <p class="cover-tagline">Brand Guidelines — Identidade Visual Completa</p>
     <p class="cover-year">© 2025 · Versão 1.0 · Confidencial</p>
@@ -828,22 +823,22 @@ body.dm-light .dark-toggle { background: var(--n-100); color: var(--n-700); }
 
     <div class="grid-3 fade-in" style="margin-bottom: 48px;">
       <div class="logo-variant" style="background:#0A0A0A;">
-        <span class="logo-text" style="font-size:48px; color:#F5C518;">Yello</span>
+        <img src="assets/logo-dark.png" alt="Yello — fundo escuro" style="height:64px; width:auto;">
         <span class="logo-variant-label">Principal — fundo escuro</span>
       </div>
       <div class="logo-variant" style="background:#F5C518;">
-        <span class="logo-text" style="font-size:48px; color:#0A0A0A;">Yello</span>
+        <img src="assets/logo-yellow.png" alt="Yello — fundo amarelo" style="height:64px; width:auto;">
         <span class="logo-variant-label" style="color:#0A0A0A;">Versão amarela</span>
       </div>
       <div class="logo-variant" style="background:#FFFFFF; border:1px solid #E5E5EA;">
-        <span class="logo-text" style="font-size:48px; color:#0A0A0A;">Yello</span>
+        <img src="assets/logo.png" alt="Yello — fundo branco" style="height:64px; width:auto;">
         <span class="logo-variant-label">Fundo branco</span>
       </div>
     </div>
 
     <div class="fade-in" style="margin-bottom: 48px; text-align: center;">
       <div class="clearspace-demo">
-        <span class="logo-text" style="font-size:56px; color:#F5C518;">Yello</span>
+        <img src="assets/logo.png" alt="Yello" style="height:72px; width:auto;">
       </div>
     </div>
 
@@ -870,82 +865,25 @@ body.dm-light .dark-toggle { background: var(--n-100); color: var(--n-700); }
     </div>
 
     <div class="dash-display fade-in" style="margin-bottom:48px;">
-      <svg class="dash-main-svg" viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="140" cy="140" r="130" fill="#1C1C1E"/>
-        <circle cx="140" cy="140" r="130" fill="url(#glow)" opacity="0.3"/>
-        <defs>
-          <radialGradient id="glow" cx="50%" cy="40%" r="60%">
-            <stop offset="0%" stop-color="#F5C518" stop-opacity="0.4"/>
-            <stop offset="100%" stop-color="#F5C518" stop-opacity="0"/>
-          </radialGradient>
-        </defs>
-        <!-- Body -->
-        <ellipse cx="140" cy="155" rx="55" ry="65" fill="#F5C518"/>
-        <!-- Head -->
-        <circle cx="140" cy="95" r="42" fill="#F5C518"/>
-        <!-- Eyes -->
-        <circle cx="126" cy="90" r="7" fill="#0A0A0A"/>
-        <circle cx="154" cy="90" r="7" fill="#0A0A0A"/>
-        <circle cx="128" cy="88" r="2.5" fill="white"/>
-        <circle cx="156" cy="88" r="2.5" fill="white"/>
-        <!-- Smile -->
-        <path d="M124 106 Q140 120 156 106" stroke="#0A0A0A" stroke-width="3" stroke-linecap="round" fill="none"/>
-        <!-- Arms -->
-        <ellipse cx="75" cy="150" rx="14" ry="28" rx="14" ry="28" fill="#F5C518" transform="rotate(-20 75 150)"/>
-        <ellipse cx="205" cy="150" rx="14" ry="28" fill="#F5C518" transform="rotate(20 205 150)"/>
-        <!-- Legs -->
-        <ellipse cx="122" cy="218" rx="14" ry="20" fill="#E8A800"/>
-        <ellipse cx="158" cy="218" rx="14" ry="20" fill="#E8A800"/>
-        <!-- Lightning bolt detail -->
-        <path d="M136 130 L128 148 L138 148 L132 168 L148 142 L138 142 L144 130Z" fill="#0A0A0A" opacity="0.15"/>
-      </svg>
+      <img src="assets/mascot-standing.png" alt="Dash — mascote Yello" class="dash-main-svg" style="width:280px; height:280px; object-fit:contain; filter: drop-shadow(0 16px 48px rgba(245,197,24,0.3));">
 
       <div>
         <div class="pose-grid fade-in">
           <div class="pose-item">
-            <svg viewBox="0 0 120 120" fill="none">
-              <circle cx="60" cy="50" r="28" fill="#F5C518"/>
-              <circle cx="50" cy="46" r="5" fill="#0A0A0A"/>
-              <circle cx="70" cy="46" r="5" fill="#0A0A0A"/>
-              <path d="M50 62 Q60 72 70 62" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-              <ellipse cx="60" cy="88" rx="22" ry="28" fill="#F5C518"/>
-            </svg>
+            <img src="assets/mascot-branch.png" alt="Dash neutro" style="width:120px; height:120px; object-fit:contain;">
             <p class="pose-label">Neutro</p>
           </div>
           <div class="pose-item">
-            <svg viewBox="0 0 120 120" fill="none">
-              <circle cx="60" cy="50" r="28" fill="#F5C518"/>
-              <path d="M47 44 Q52 38 57 44" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-              <path d="M63 44 Q68 38 73 44" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-              <path d="M48 60 Q60 72 72 60" stroke="#0A0A0A" stroke-width="3" stroke-linecap="round" fill="none"/>
-              <ellipse cx="60" cy="88" rx="22" ry="28" fill="#F5C518"/>
-              <line x1="30" y1="55" x2="18" y2="40" stroke="#F5C518" stroke-width="3" stroke-linecap="round"/>
-              <line x1="90" y1="55" x2="102" y2="40" stroke="#F5C518" stroke-width="3" stroke-linecap="round"/>
-            </svg>
+            <img src="assets/mascot-standing.png" alt="Dash animado" style="width:120px; height:120px; object-fit:contain;">
             <p class="pose-label">Animado</p>
           </div>
           <div class="pose-item">
-            <svg viewBox="0 0 120 120" fill="none">
-              <circle cx="60" cy="50" r="28" fill="#F5C518"/>
-              <circle cx="50" cy="46" r="5" fill="#0A0A0A"/>
-              <circle cx="70" cy="46" r="5" fill="#0A0A0A"/>
-              <path d="M50 66 Q60 58 70 66" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-              <ellipse cx="60" cy="88" rx="22" ry="28" fill="#F5C518"/>
-              <path d="M38 70 L26 90" stroke="#F5C518" stroke-width="4" stroke-linecap="round"/>
-            </svg>
-            <p class="pose-label">Confuso</p>
+            <img src="assets/mascot-icon.png" alt="Dash ícone" style="width:120px; height:120px; object-fit:contain;">
+            <p class="pose-label">Ícone</p>
           </div>
           <div class="pose-item">
-            <svg viewBox="0 0 120 120" fill="none">
-              <circle cx="60" cy="50" r="28" fill="#F5C518"/>
-              <rect x="46" y="43" width="12" height="8" rx="2" fill="#0A0A0A"/>
-              <rect x="62" y="43" width="12" height="8" rx="2" fill="#0A0A0A"/>
-              <path d="M50 62 Q60 70 70 62" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-              <ellipse cx="60" cy="88" rx="22" ry="28" fill="#F5C518"/>
-              <circle cx="80" cy="35" r="8" fill="#22C55E"/>
-              <path d="M76 35 L79 38 L84 31" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-            </svg>
-            <p class="pose-label">Sucesso</p>
+            <img src="assets/mascot-icon-dark.png" alt="Dash dark" style="width:120px; height:120px; object-fit:contain; border-radius:12px;">
+            <p class="pose-label">Dark</p>
           </div>
         </div>
       </div>
@@ -1378,7 +1316,7 @@ body.dm-light .dark-toggle { background: var(--n-100); color: var(--n-700); }
           </div>
           <div class="template-card-body" style="background:#1C1C1E; padding:20px;">
             <div style="display:flex; align-items:center; gap:12px;">
-              <div style="width:40px; height:40px; background:#F5C518; border-radius:10px; display:flex; align-items:center; justify-content:center; font-family:'Syne',sans-serif; font-weight:800; font-size:14px; color:#0A0A0A; flex-shrink:0;">Y</div>
+              <div style="width:40px; height:40px; background:#F5C518; border-radius:10px; overflow:hidden; flex-shrink:0; display:flex; align-items:center; justify-content:center;"><img src="assets/mascot-icon.png" alt="Y" style="width:32px; height:32px; object-fit:contain;"></div>
               <div>
                 <p style="font-size:13px; font-weight:600; color:#FFFFFF; margin-bottom:2px;">Yello · agora</p>
                 <p style="font-size:13px; color:#8E8E93; line-height:1.4;">PIX recebido! R$ 120,00 de Carlos M.</p>
